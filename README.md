@@ -1,18 +1,11 @@
-# openvpn-docker
+# docker-openvpn
 
-#### This is the docker image used by the kubernetes helm chart openvpn: [https://github.com/kubernetes/charts/tree/master/stable/openvpn](https://github.com/kubernetes/charts/tree/master/stable/openvpn).
+Originally forked from https://github.com/jfelten/openvpn-docker and then adjusted/upgraded.
 
-#### There is not much here other than a base alpine image with packages needed to run openvpn: openssl, easy-rsa, openvpn, and iptables.  Much of the configuration is done through kubernetes and helm. Please refer to the scripts [here](https://github.com/kubernetes/charts/blob/master/stable/openvpn/templates/config-openvpn.yaml) for better understanding.
-
-#### That chart originally used a base Alpine image, but the Alpine repositories worked inconsistently so this image was created to remove a point of failure.
-
-
-To rebuild:
+## How to Build
 
 ```bash
-
-	git clone https://github.com/jfelten/openvpn-docker.git
-	cd openvpn-docker
+	git clone https://github.com/theAkito/docker-openvpn.git
+	cd docker-openvpn
 	docker build .
-	
 ```
